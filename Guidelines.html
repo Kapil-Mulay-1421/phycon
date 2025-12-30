@@ -1,0 +1,418 @@
+<html>
+
+<head>
+    <title>Phycon_2025</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    
+  <div style="width: 100%; margin: auto; padding-left: 1%; padding-right: 1%;">
+    <nav class="navbar navbar-expand-lg navbar-light toolbar" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./assets/head.jpg'); background-size: cover; background-position: center; padding-left: 0%;">
+      <!--<a class="navbar-brand" href="./index.htm">Research Scholar Day</a>-->
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="position: relative; top: -20px;">
+          <span class="navbar-toggler-icon"  style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 30 30%22%3E%3Cpath stroke=%22white%22 stroke-width=%223%22 d=%22M4 7h22M4 15h22M4 23h22%22/%3E%3C/svg%3E');"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" 
+      style="justify-content: right; font-size: 17px; font-family: 'Poppins', sans-serif;">
+          <ul class="nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/phycon" style="color: white;">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./organisingnew.html" style="color: white;">Organising Committee</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./speakers.html" style="color: white;">Speakers</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./abstract.html" style="color: white;">Abstract submission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./registration.html" style="color: white;">Registration</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./Schedule.html" style="color: white;">Schedule</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./Useful_Info.html" style="color: white;">Information</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="" style="color: ffcc00;">Feedback</a>
+            </li>
+          </ul>
+      </div>
+  </nav>
+    
+    
+  
+  
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+        }
+
+        /* Container for the image and text */
+        .conference-banner {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%; /* 2:1 aspect ratio (height is half of the width) */
+            background: url('./assets/admin\ block.jpg') no-repeat center center; /* Set background image */
+            background-size: cover; /* Make sure image covers the frame area */
+            background-position: center;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        /* Dark overlay on top of the image */
+        .conference-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        /* Centering the text inside the banner */
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2; /* Ensure text is above the overlay */
+            width: 100%;
+        }
+
+        /* Main header text */
+        .banner-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Subheading text */
+        .banner-text h4 {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Smaller text below */
+        .banner-text h5 {
+            font-size: 24px;
+            font-style: italic;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            opacity: 0; /* Initially invisible */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+        }
+
+        /* Add the transition class for opacity change */
+        .fade-in {
+            opacity: 1 !important;
+        }
+
+        /* Responsive text sizes */
+        @media (max-width: 1024px) {
+            .banner-text h1 {
+                font-size: 36px;
+            }
+
+            .banner-text h4 {
+                font-size: 24px;
+            }
+
+            .banner-text h5 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 30px;
+            }
+
+            .banner-text h4 {
+                font-size: 20px;
+            }
+
+            .banner-text h5 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-text h1 {
+                font-size: 24px;
+            }
+
+            .banner-text h4 {
+                font-size: 18px;
+            }
+
+            .banner-text h5 {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script>
+        // Array of texts with links
+        const texts = [
+        // { text: "The registration desk will open again at 10:50 AM.", link: " " },
+        // { text: "The Conference Schedule is now Available", link: " " },
+            // { text: "The registration desk will open again at 10:50 AM. ", link: " " },
+            // { text: "Registration is Open", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            // { text: "Last Date for Abstract Submission: March 8, 2025", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            // { text: "Last Date for Registration: March 13, 2025", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            
+            
+        ];
+
+        let index = 0;
+
+        function changeText() {
+            const changingTextElement = document.getElementById('changingText');
+            const textData = texts[index];
+
+            // Fade out the current text
+            changingTextElement.classList.remove('fade-in');
+
+            // Wait for the fade-out to complete, then change the text
+            setTimeout(() => {
+                // Update text and link
+                changingTextElement.innerHTML = `<a href="${textData.link}" style="color: white; text-decoration: none;">${textData.text}</a>`;
+
+                // Fade in the new text
+                changingTextElement.classList.add('fade-in');
+
+                // Move to the next text
+                index = (index + 1) % texts.length; // Loop through the array
+            }, 1000); // Wait for 1 second (duration of fade-out)
+        }
+
+        // Change text every 4 seconds
+        setInterval(changeText, 4000);
+    </script>
+</head>
+<body>
+
+    <!-- Banner Section with Image and Text -->
+    <div class="conference-banner">
+        <div class="banner-text">
+            <h1 style="font-family: Arial, Helvetica, sans-serif;">PHYCON-25</h1>
+            <h4 style="font-family: Arial, Helvetica, sans-serif;">The National Physics Conference</h4>
+            <h4 style="font-family: Arial, Helvetica, sans-serif;">21-22 March, 2025</h4>
+            <br>
+            
+            <h5 id="changingText"> 
+                <a href="https://www.iitrpr.ac.in/phycon"
+                style="color: #ffffff; text-decoration: none;"> Department of Physics, IIT Ropar </a>  
+            </h5> <!-- Dynamic Text Here -->
+          
+            <!-- <br>
+            <p style="font-size: 22px; color: white;">   -->
+             <!-- Abstract Submission Deadline: March 3, 2025 </p> -->
+            <!-- <h4> Registration</h4> -->
+        </div>
+    </div>
+
+    <!-- Scripts for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+      
+  <br>
+      <div class="text">
+        <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-style: normal; color: #7f0741;">
+            <!-- Abstract Submission Details </h1> -->
+        <!-- <h5 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 24px; font-style: normal; color: #7f0741;">
+          Department of Physics, IIT Ropar | 9<sup>th</sup>-14<sup>th</sup> December 2024  </h5> -->
+      </div>
+      
+
+
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration Details</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0px 0px 0px 0px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2e7557;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .content {
+            font-size: 19px;
+            line-height: 1.6;
+        }
+        .highlight {
+            color: rgb(241, 95, 79);
+            text-decoration: underline;
+        }
+        ol {
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+        .important {
+            color: #2e7557;
+            font-weight: bold;
+        }
+        .card-body {
+            padding: 20px;
+            text-align: justify;
+        }
+        .registration-date {
+            font-size: 18px;
+            color: #c84e1f;
+            font-weight: bold;
+        }
+        .note {
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-style: normal; color: #7f0741;">PHYCON-25 FEEDBACK</h1>
+        
+        <div class="card-body">
+            <!-- <h3 class="important">Oral Presentation</h3> -->
+
+            <h5>Thank you for being a part of PHYCON-25! We value your feedback and would love to hear about your experience. Your insights will help us enhance future editions of the conference.</h5>
+            <!-- <p class="content">
+                Kindly <span class="highlight"><a href="https://forms.gle/NtqfRWUMvREpQVjX7" target="_blank">click here</a></span> to submit your abstract. Find the format of the abstract for reference <span class="highlight"><a href="./assets/PHYCON-25.doc" download>here</a></span>.
+            </p>
+            <p class="content">
+                Please note that participation is limited to selected number of participants. The selected participants will receive an email of invitation. </p>
+                <br><p style="color: #a00916;">The last date for abstract submission has been extended to <b>March 8, 2025</b>.
+            </p> -->
+
+            <!-- <h3 class="important"> Important Dates </h3>
+            <ol>
+                <li align="left">Oral/Poster Submission End: <strong style="font-family: 'Times New Roman', Times, serif; font-size: 18px;">March 3, 2025
+                </strong></li>
+                <li align="left">Oral/ Poster Acceptance: <strong style="font-family: 'Times New Roman', Times, serif; font-size: 18px;">March 8, 2025
+                </strong></li>
+                <li align="left">Request for Registration/Accommodation: <strong style="font-family: 'Times New Roman', Times, serif; font-size: 18px;">March 12, 2025
+                </strong></li>
+            </ol> -->
+            <h3 class="important">Why Your Feedback Matters</h3>
+            <p>Your input allows us to:</p>
+            <ol style="font-family: Arial, sans-serif">
+                <li> Improving Event Organization</li>               
+                <li>Enhancing Session Quality</li>
+                <li>Curating Relevant Topics</li>
+                <li>Creating a Better Experience</li>
+                
+                
+            </ol>
+ 
+            <p>Please <span class="highlight"><a href="https://forms.gle/ykXPFqmnvkTghU6E7" download>click here</a></span> to Submit Your Feedback.</p>
+           
+
+<p>Thank you for contributing to the success of PHYCON-25!</p>
+            <!-- <p style="font-size: 20px;">Last date for abstract submission is <b><I>March 3, 2025.</I></b></p> -->
+            
+            <div class="note">
+                
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>For any inquiries, feel free to contact us at <a href="phycon@iitrpr.ac.in">phycon@iitrpr.ac.in</a></p>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+
+        <br>
+
+        <footer class="text-center py-3" style="background-color: #f8f9fa; border-top:1.2px solid #7f0741; margin: 0px 0; ">
+          <img src="./assets/iit ropar logo.jpg" alt="IIT Ropar Logo" style="height: 40px;">
+          <p>© 2025 Department of Physics, IIT Ropar. All Rights Reserved. <br>
+              Rupnagar, Punjab 140001
+          </p>
+          <p><a href="https://www.iitrpr.ac.in/physics/p/contact-2" target="_blank">Contact Us</a> | <a href="https://www.iitrpr.ac.in/physics" target="_blank">Visit Dept. Page</a></p>
+      </footer>
+
+
+
+  </div>
+
+<script>
+  $(document).ready(function(){
+  $('#carouselExampleSlidesOnly').carousel({
+    interval:3500
+  });
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

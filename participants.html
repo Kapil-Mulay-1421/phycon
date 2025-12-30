@@ -1,0 +1,516 @@
+<html></html>
+
+<head>
+    <title>Phycon_2025</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    
+  <div style="width: 100%; margin: auto; padding-left: 1%; padding-right: 1%;">
+    <nav class="navbar navbar-expand-lg navbar-light toolbar" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./assets/head.jpg'); background-size: cover; background-position: center; padding-left: 0%;">
+      <!--<a class="navbar-brand" href="./index.htm">Research Scholar Day</a>-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" 
+      style="justify-content: right; font-size: 19px; font-family: 'Poppins', sans-serif;">
+          <ul class="nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/phycon" style="color: white;">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./organisingnew.html" style="color: white;">Organising Committee</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="" style="color: ffcc00;">Participants</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./speakers.html" style="color: white;">Speakers & Posters</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./registration.html" style="color: white;">Registration</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./Schedule.html" style="color: white;">Schedule</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./Useful_Info.html" style="color: white;">Useful Informations</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+    
+    
+  
+   
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+        }
+
+        /* Container for the image and text */
+        .conference-banner {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%; /* 2:1 aspect ratio (height is half of the width) */
+            background: url('./assets/New2.jpg') no-repeat center center; /* Set background image */
+            background-size: cover; /* Make sure image covers the frame area */
+            background-position: center;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        /* Dark overlay on top of the image */
+        .conference-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        /* Centering the text inside the banner */
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2; /* Ensure text is above the overlay */
+            width: 100%;
+        }
+
+        /* Main header text */
+        .banner-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Subheading text */
+        .banner-text h4 {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Smaller text below */
+        .banner-text h5 {
+            font-size: 24px;
+            font-style: italic;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            opacity: 0; /* Initially invisible */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+        }
+
+        /* Add the transition class for opacity change */
+        .fade-in {
+            opacity: 1 !important;
+        }
+
+        /* Responsive text sizes */
+        @media (max-width: 1024px) {
+            .banner-text h1 {
+                font-size: 36px;
+            }
+
+            .banner-text h4 {
+                font-size: 24px;
+            }
+
+            .banner-text h5 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 30px;
+            }
+
+            .banner-text h4 {
+                font-size: 20px;
+            }
+
+            .banner-text h5 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-text h1 {
+                font-size: 24px;
+            }
+
+            .banner-text h4 {
+                font-size: 18px;
+            }
+
+            .banner-text h5 {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script>
+        // Array of texts with links
+        const texts = [
+            { text: "Department of Physics, IIT Ropar", link: "https://www.iitrpr.ac.in/physics" },
+            { text: "Celebrating 100 Years of Quantum Mechanics", link: "" },
+            { text: "Registration will be opening soon", link: "https://www.iitrpr.ac.in/phycon/registration.html" }
+        ];
+
+        let index = 0;
+
+        function changeText() {
+            const changingTextElement = document.getElementById('changingText');
+            const textData = texts[index];
+
+            // Fade out the current text
+            changingTextElement.classList.remove('fade-in');
+
+            // Wait for the fade-out to complete, then change the text
+            setTimeout(() => {
+                // Update text and link
+                changingTextElement.innerHTML = `<a href="${textData.link}" style="color: white; text-decoration: none;">${textData.text}</a>`;
+
+                // Fade in the new text
+                changingTextElement.classList.add('fade-in');
+
+                // Move to the next text
+                index = (index + 1) % texts.length; // Loop through the array
+            }, 1000); // Wait for 1 second (duration of fade-out)
+        }
+
+        // Change text every 4 seconds
+        setInterval(changeText, 4000);
+    </script>
+</head>
+<body>
+
+    <!-- Banner Section with Image and Text -->
+    <div class="conference-banner">
+        <div class="banner-text">
+            <h1>PHYCON-25</h1>
+            <h4>The National Physics Conference</h4>
+            <h5 id="changingText"> 
+                <a href="https://www.iitrpr.ac.in/phycon"
+                style="color: #ffffff; text-decoration: none;"> Department of Physics, IIT Ropar </a>  
+            </h5> <!-- Dynamic Text Here -->
+            <br>
+            <br>
+            
+            <h4> Participants</h4>
+        </div>
+    </div>
+
+    <!-- Scripts for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+  <br>
+      <div class="text">
+        <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-style: normal; color: #7f0741;">
+          Participants will be announced soon...</h1>
+        <!-- <h5 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 24px; font-style: normal; color: #7f0741;">
+          Department of Physics, IIT Ropar | 9<sup>th</sup>-14<sup>th</sup> December 2024  </h5> -->
+      </div>
+  <hr>
+       <br>
+  <!-- <div class="card-body" style="padding-left: 3%;padding-right: 3%;">
+    <p Style="font-size: 30px ; font-family: 'Times New Roman', Times, serif; text-align: center;">
+      <b> To be announced shortly...</b>
+    </p>       
+    <br><br><br><br><br>  -->  
+            
+            <div class="card-body">
+              
+              <div class="table-responsive">
+  
+                  <div class="table-responsive">
+                      <table style="text-align: center;" class="table table-striped table-bordered" class="auto-index;" >
+                        <style>
+                          table{
+                            margin: auto;
+                          }
+                          table td, table th {
+                              font-size: smaller;
+                              border: 1px solid black;
+                              line-height: 1.4;
+                              padding: 10px 10px;
+                          }
+                      </style>
+                      <table style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif, serif;" class="css-serial" >
+                      
+                        <tbody>
+                        <tr>
+                          <!-- <th style="text-align: center;" > &ensp; S. N. &ensp;</th> -->
+                          <!-- <th>Name &emsp; &emsp;&emsp; &emsp;&emsp;</th> -->
+                          <!-- <th>Affiliation &emsp;&emsp;&emsp;&emsp; &emsp;&emsp; </th> -->
+                          <!-- <th>Designation &emsp;&emsp; </th> -->
+                      </tr>
+                      <!-- Faculty -->
+                      <!-- <tr><td style="text-align: center;"></td><td>Abhijit Gadde</td><td>TIFR</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Abhishek Chowdhury</td><td>IIT Bhubaneswar</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Alok Laddha</td><td>CMI</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Anshuman Maharana</td><td>HRI Allahabad</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Arnab Kundu</td><td>SINP</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Arnab Priya Saha</td><td>IISc</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Arnab Rudra</td><td>IISER Bhubaneswar</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Ashoke Sen</td><td>ICTS</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Bindusar Sahoo</td><td>IISER Thiruvananthpuram</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Bobby Ezhuthachan</td><td>RKMVERI</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Chethan N. Gowdigere</td><td>NISER</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Debashis Ghoshal</td><td>JNU Delhi</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Diptarka Das</td><td>IIT Kanpur</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>K Narayan</td><td>CMI</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Koushik Ray</td><td>IACS</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Loganayagam R.</td><td>ICTS</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Mritunjay Kumar Verma</td><td>IIT Indore</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Nemani V Suryanarayana</td><td>IMSc</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Nilay Kundu</td><td>IIT Kanpur</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Pinaki Banerjee</td><td>IOP</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Pramod Kumar Shukla</td><td>Bose Institute</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Raghu Mahajan</td><td>ICTS</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Rajesh Kumar Gupta</td><td>IIT Ropar</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Ronak M Soni</td><td>CMI</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sandip Trivedi</td><td>TIFR</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sarthak Parikh</td><td>IIT Delhi</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Shamik Banerjee</td><td>NISER</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Shankhadeep Chakrabortty</td><td>IIT Ropar</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Shiraz Minwalla</td><td>TIFR</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Souvik Banerjee</td><td>University of Würzburg</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sumathi Rao</td><td>ICTS</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sunil Mukhi</td><td>IISER Pune</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Swarnendu Sarkar</td><td>Vidyasagar University</td><td>Faculty</td></tr>
+                      <tr><td style="text-align: center;"></td><td>V Ravindran</td><td>IMSc</td><td>Faculty</td></tr> -->
+
+
+                      <!-- Postdocs -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Ahmadullah Zahed</td><td>ICTP</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Akavoor Manu</td><td>IMSc</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Arindam Bhattacharjee</td><td>University of Warsaw</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Arkajyoti Manna</td><td>IISc</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Arpan Kundu</td><td>IIT Ropar</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Astha Kakkar</td><td>IIT Kanpur</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Eunwoo Lee</td><td>TIFR</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Gaurav Katoch</td><td>IIT Indore</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Gopal Yadav</td><td>CMI</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Hemant Rathi</td><td>SINP</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Jagannath Santara</td><td>IIT Madras</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Kanhu Kishore Nanda</td><td>TIFR</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Muktajyoti Saha</td><td>ICTS</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Nava Gaddam</td><td>ICTS</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Nishant Gupta</td><td>NISER</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Partha Paul</td><td>IMSc</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Parthajit Biwsas</td><td>RKMVU, West Bengal</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Pavan Dharanipragada</td><td>IIT Madras</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Prahar Mitra</td><td>University of Amsterdam</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Priyadarshini Pandit</td><td>IIT Kanpur</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Ritankar Chatterjee</td><td>IIT Ropar</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sachin Grover</td><td>IIT Kanpur and HRI Allahabad</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Semanti Dutta</td><td>SNBNCBS</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Shanmugapriya Prakasam</td><td>ICTS</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Siddharth Prabhu</td><td>TIFR</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sourav Roychowdhury</td><td>IMSc</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Subramanya Hegde</td><td>Max Planck Munich</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sujoy Mahato</td><td>HRI Allahabad</td><td>Post Doc.</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Supragyan Priyadarshinee</td><td>IISER Mohali</td><td>Post Doc.</td></tr> -->
+
+
+                      <!--Students-->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Aakash Kumar</td><td>IISER Bhopal</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Abhik Bhattacharjee</td><td>HRI Allahabad</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Abhinava Bhattacharjee</td><td>IISER Thiruvananthapuram</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Adarsh Sudhakar</td><td>IMSc</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Aditya Jain</td><td>Ashoka University</td><td>Student</td></tr>
+ -->
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Aditya Sharma</td><td>IIT Kharagpur</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Ajay Mohan</td><td>TIFR</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Akash Singh</td><td>IISER Mohali</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Akashdeep Roy</td><td>TIFR</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Akhila S</td><td>IIT Madras</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Alokananda Kar</td><td>IIT(ISM) Dhanbad</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Aman Chauhan</td><td>HRI Allahabad</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Amit Suthar</td><td>IMSc</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Ankur Dey</td><td>IIT Kanpur</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Anowar Shaikh</td><td>IIT(ISM) Dhanbad</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Anurag Sarkar</td><td>IIT Kanpur</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>AP Sreehari</td><td>IIT Madras</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Archana Maji</td><td>IIT Bombay</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Arpit Maurya</td><td>IIT Ropar</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Ashes Modak</td><td>IIT(ISM) Dhanbad</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Ashik H</td><td>ICTS</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Asikur Rahaman</td><td>TIFR</td><td>Student</td></tr> -->
+
+<!-- 
+                      <tr><td style="text-align: center;"></td><td>Babli Khatun</td><td>ICTS</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Balbeer Singh</td><td>IIT Kharagpur</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Banashree Baishya</td><td>IIT Guwahati</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Bhaskar Shukla</td><td>NIT Rourkela</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Bhim Sen</td><td>IIT Indore</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Biswajit</td><td>IISER Bhopal</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Debabrata Sahu</td><td>IIT Bhuvaneshwar</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Debanjan Karan</td><td>ICTS</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Debapriyo Chowdhury</td><td>IISc</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Deep Mazumdar</td><td>IISER Pune</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Godwin Martin</td><td>ICTS</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Hakim Jahan Sekhe</td><td>IISER Bhopal</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Harsh</td><td>CMI</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Harshit Rajgadia</td><td>TIFR</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Himanshu Chourasiya</td><td>IIT Kanpur</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Jayashish Das</td><td>SINP</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Joydeep Naskar</td><td>North Eastern University USA</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Kaberi Goswami</td><td>CMI</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Kabir Bajaj</td><td>IIT Bombay</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Kaustubh </td><td>ICTS</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Krishna Jalan</td><td>IMSc</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Lakshita Bageja</td><td>IISER Bhopal</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Meenu</td><td>IIT Ropar</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Mrityunjay Nath</td><td>IIT Indore</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Nibedita Padhi</td><td>IIT Kharagpur</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Parashar Chatterjee</td><td>NISER</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Poulami Mukherjee</td><td>IIT Bhubaneswar</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Pronoy Chakraborty</td><td>IIT Ropar</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Rahul Shaw</td><td>IISER Bhopal</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Rajat Raj</td><td>TIFR</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Rajendra Kumar Kumawat</td><td>IIT Ropar</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Raju Mandal</td><td>NISER</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Rishabh Kaushik</td><td>ICTS</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Ritwick Kumar Ghosh</td><td>ICTS</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Rushikesh Suroshe</td><td>TIFR</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sagnik Misra</td><td>NISER</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Saikat Biswas</td><td>IIT Kanpur</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Shivam Kumar Sharma</td><td>ICTS</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Shivam Kushwah</td><td>IIT Roorkee</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Shridhar Vinayak</td><td>ICTS</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Shruti Menon</td><td>IISER Bhopal</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Siddhant Tiwari</td><td>IIT Ropar</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Siddhiswarupa jena</td><td>NIT Rourkela</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Soumya Adhikari</td><td>IISER Thiruvananthapuram</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sounak Pal</td><td>IIT Gandhinagar</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Souparna Nath</td><td>TIFR</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sourav Maji</td><td>IIT Bhuvaneshwar</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Sourav Singha</td><td>IIT Kharagpur</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Sourish Banerjee</td><td>BITS Pilani Goa Campus</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Srijan Kumar</td><td>IISc</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Subhodip Bandyopadhyay</td><td>NISER</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Sudesh</td><td>IIT Ropar</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Suprakash Paul</td><td>TIFR</td><td>Student</td></tr> -->
+
+
+                      <!-- <tr><td style="text-align: center;"></td><td>Tanmoy Sengupta</td><td>IMSc</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Vatsal</td><td>TIFR</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Vipul Kumar</td><td>TIFR</td><td>Student</td></tr>
+                      <tr><td style="text-align: center;"></td><td>Vivek Singh</td><td>TIFR</td><td>Student</td></tr> -->
+                      </tbody>
+                    </table>              
+                      </table>
+                  </div>
+  
+  
+  
+  
+  
+              </div>
+            
+            
+            
+        </div>
+
+        <footer class="text-center py-3" style="background-color: #f8f9fa; border-top:1.2px solid #7f0741; margin: 0px 0">
+          <img src="./assets/iit ropar logo.jpg" alt="IIT Ropar Logo" style="height: 40px;">
+          <p>© 2025 Department of Physics, IIT Ropar. All Rights Reserved. <br>
+              Rupnagar, Punjab 140001
+          </p>
+          <p><a href="https://www.iitrpr.ac.in/physics/p/contact-2" target="_blank">Contact Us</a> | <a href="https://www.iitrpr.ac.in/physics" target="_blank">Visit Dept. Page</a></p>
+      </footer>
+
+
+</div>
+        
+    </div>
+  
+
+
+
+
+
+
+    
+<script>
+  $(document).ready(function(){
+  $('#carouselExampleSlidesOnly').carousel({
+    interval:3500
+  });
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<html></html>
+
+<head>
+    <title>Phycon_2025</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    
+  <div style="width: 100%; margin: auto; padding-left: 1%; padding-right: 1%;">
+    <nav class="navbar navbar-expand-lg navbar-light toolbar" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./assets/head.jpg'); background-size: cover; background-position: center; padding-left: 0%;">
+      <!--<a class="navbar-brand" href="./index.htm">Research Scholar Day</a>-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"  style="position: relative; top: -20px;">
+          <span class="navbar-toggler-icon"  style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 30 30%22%3E%3Cpath stroke=%22white%22 stroke-width=%223%22 d=%22M4 7h22M4 15h22M4 23h22%22/%3E%3C/svg%3E');"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" 
+      style="justify-content: right; font-size: 17px; font-family: 'Poppins', sans-serif;">
+          <ul class="nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="\phycon" style="color: white;">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./organisingnew.html" style="color: white;">Organising Committee</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="" style="color: ffcc00;">Speakers</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./abstract.html" style="color: white;">Abstract submission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./registration.html" style="color: white;">Registration</a>
+            </li>
+            
+              <li class="nav-item">
+                  <a class="nav-link" href="./Schedule.html" style="color: white;">Schedule</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./Useful_Info.html" style="color: white;">Information</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./feedback.html" style="color: white;">Feedback</a>
+            </li>
+          </ul>
+      </div>
+  </nav>
+    
+    
+  
+
+
+
+
+
+
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+        }
+
+        /* Container for the image and text */
+        .conference-banner {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%; /* 2:1 aspect ratio (height is half of the width) */
+            background: url('./assets/New5.jpg') no-repeat center center; /* Set background image */
+            background-size: cover; /* Make sure image covers the frame area */
+            background-position: center;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        /* Dark overlay on top of the image */
+        .conference-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        /* Centering the text inside the banner */
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2; /* Ensure text is above the overlay */
+            width: 100%;
+        }
+
+        /* Main header text */
+        .banner-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Subheading text */
+        .banner-text h4 {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Smaller text below */
+        .banner-text h5 {
+            font-size: 24px;
+            font-style: italic;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            opacity: 0; /* Initially invisible */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+        }
+
+        /* Add the transition class for opacity change */
+        .fade-in {
+            opacity: 1 !important;
+        }
+
+        /* Responsive text sizes */
+        @media (max-width: 1024px) {
+            .banner-text h1 {
+                font-size: 36px;
+            }
+
+            .banner-text h4 {
+                font-size: 24px;
+            }
+
+            .banner-text h5 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 30px;
+            }
+
+            .banner-text h4 {
+                font-size: 20px;
+            }
+
+            .banner-text h5 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-text h1 {
+                font-size: 24px;
+            }
+
+            .banner-text h4 {
+                font-size: 18px;
+            }
+
+            .banner-text h5 {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script>
+        // Array of texts with links
+        const texts = [
+        // { text: "The registration desk will open again at 10:50 AM.", link: " " },
+        // { text: "The Conference Schedule is now Available", link: " " },
+            // { text: "The registration desk will open again at 10:50 AM. ", link: " " },
+            // { text: "Registration is Open", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            // { text: "Last Date for Abstract Submission: March 8, 2025", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            // { text: "Last Date for Registration: March 13, 2025", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            
+        ];
+
+        let index = 0;
+
+        function changeText() {
+            const changingTextElement = document.getElementById('changingText');
+            const textData = texts[index];
+
+            // Fade out the current text
+            changingTextElement.classList.remove('fade-in');
+
+            // Wait for the fade-out to complete, then change the text
+            setTimeout(() => {
+                // Update text and link
+                changingTextElement.innerHTML = `<a href="${textData.link}" style="color: white; text-decoration: none;">${textData.text}</a>`;
+
+                // Fade in the new text
+                changingTextElement.classList.add('fade-in');
+
+                // Move to the next text
+                index = (index + 1) % texts.length; // Loop through the array
+            }, 1000); // Wait for 1 second (duration of fade-out)
+        }
+
+        // Change text every 4 seconds
+        setInterval(changeText, 4000);
+    </script>
+</head>
+<body>
+
+    <!-- Banner Section with Image and Text -->
+    <div class="conference-banner">
+        <div class="banner-text">
+            <h1>PHYCON-25</h1>
+            <h4>The National Physics Conference</h4>
+            <h4>21-22 March, 2025</h4>
+            <br>
+            
+            <h5 id="changingText"> 
+                <a href="https://www.iitrpr.ac.in/phycon"
+                style="color: #ffffff; text-decoration: none;"> Department of Physics, IIT Ropar </a>  
+            </h5> <!-- Dynamic Text Here -->
+            <br>
+            <br>
+            <!-- <p style="font-size: 40px; color: rgb(255, 255, 255);"> SPEAKERS</p> -->
+        </div>
+    </div>
+
+    <!-- Scripts for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+      
+  <br>
+  <div class="text">
+    <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-style: normal; color: #7f0741;">
+        SPEAKERS </h1>
+    <!-- <h5 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 24px; font-style: normal; color: #7f0741;">
+      Department of Physics, IIT Ropar | 9<sup>th</sup>-14<sup>th</sup> December 2024  </h5> -->
+  </div>
+  
+<hr>
+<br>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speakers</title>
+  <style>
+      /* Container for speakers */
+      .speakers-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 20px;
+          justify-content: center;
+          padding: 30px;
+          max-width: 900px;
+          margin: auto;
+      }
+
+      /* Speaker card styling */
+      .speaker-card {
+          display: flex;
+          align-items: center;
+          background-color: #f9f9f9;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Image styling */
+      .speaker-card img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          margin-right: 20px;
+          border-radius: 14px;
+      }
+
+      /* Speaker text styling */
+      .speaker-info h3 {
+          margin: 5px 0;
+          font-size: 22px;
+      }
+
+      .speaker-info p {
+          font-size: 16px;
+          color: #555;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+          .speakers-container {
+              grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+          }
+      }
+  </style>
+</head>
+<body>
+
+  <div class="speakers-container">
+      <div class="speaker-card">
+          <img src="./assets/rajeev4.jpg" alt="Prof. Rajeev Ahuja">
+          <div class="speaker-info">
+              <h3>Prof. Rajeev Ahuja</h3>
+              <p>Director, IIT Ropar</p>
+          </div>
+      </div>
+
+      <div class="speaker-card">
+          <img src="./assets/Satishchandra.jpg" alt="Satishchandra B Ogale">
+          <div class="speaker-info">
+              <h3>Prof. Satishchandra B Ogale</h3>
+              <p>IISER Pune, Director, RISE Kolkata</p>
+          </div>
+      </div>
+
+      <div class="speaker-card">
+          <img src="./assets/Krishna.jpg" alt="Prof. M Krishnamurthy ">
+          <div class="speaker-info">
+              <h3>Prof. M Krishnamurthy </h3>
+              <p>Director, TIFR Hyderabad</p>
+          </div>
+      </div>
+
+      <div class="speaker-card">
+          <img src="./assets/Raghunath.jpg" alt="Prof. Raghunath Sahoo ">
+          <div class="speaker-info">
+              <h3>Prof. Raghunath Sahoo </h3>
+              <p>Professor, IIT Indore</p>
+          </div>
+      </div>
+      <div class="speaker-card">
+        <img src="./assets/Peter.jpg" alt="Prof. Peter Kruse">
+        <div class="speaker-info">
+            <h3>Prof. Peter Kruse</h3>
+            <p>McMaster University, Canada</p>
+        </div>
+    </div>
+    <div class="speaker-card">
+        <img src="./assets/Anand.jpg" alt="Prof. Anand Kumar Jha">
+        <div class="speaker-info">
+            <h3>Prof. Anand Kumar Jha </h3>
+            <p>Professor, IIT Kanpur</p>
+        </div>
+    </div>
+  </div>
+
+</body>
+
+
+
+                       
+    <div class="row"> 
+      <div class="column">
+       <!-- <h2 Style="padding-left: 15%;font-size: 22px ; font-family: 'Times New Roman', Times, serif;"> <b>Review speakers </b></h2> -->
+      <ul  style="padding-left: 25%;text-align: left; font-family: Georgia, 'Times New Roman', Times, serif, serif; font-size: 18px ;">
+        <!-- <li>Alok Laddha</li>
+        <li>Ashoke Sen</li>
+        <li>Sandip Trivedi</li>
+        <li>Shiraz Minwalla</li>
+        <li>Sumathi Rao</li>
+        <li>V Ravindran</li> -->
+       
+      </ul>
+      </div>
+      <div class="column">
+      <!-- <h2 Style="padding-left: 5%;font-size: 22px ; font-family: 'Times New Roman', Times, serif;"> <b>Faculty speakers </b></h2>                                -->
+      <ul style="padding-left: 15%;text-align: left; font-family:Georgia, 'Times New Roman', Times, serif, serif; font-size: 18px ;">
+        <!-- <li>Abhijit Gadde</li>
+        <li>Abhishek Choudhury</li>
+        <li>Anshuman Maharana</li>
+        <li>Arnab Kundu</li>
+        <li>Arnab Priya Saha</li>
+        <li>Arnab Rudra</li>
+        <li>Bindusar Sahoo</li>
+        <li>Chethan Gowdigere</li>
+        <li>K Narayan</li>
+        <li>Mritunjay Kumar Verma</li>
+        <li>Nemani Suryanarayanan</li>
+        <li>Nilay Kundu</li>
+        <li>Pinaki Banerjee</li>
+        <li>R Loganayagam</li>
+        <li>Raghu Mahajan</li>
+        <li>Ronak Soni</li>
+        <li>Shamik Banerjee</li>
+        <li>Souvik Banerjee</li> -->
+
+      </ul>
+    </div> 
+    <div class="column">
+        <!-- <h2 Style="padding-left: 5%;font-size: 22px ; font-family: 'Times New Roman', Times, serif;"> <b>Postdoc/Student speakers</b></h2> -->
+       <ul  style="padding-left: 15%;text-align: left; font-family: Georgia, 'Times New Roman', Times, serif, serif; font-size: 18px ;">
+          <!-- <li>Ahmadullah Zahed</li>
+          <li>Arindam Bhattacharjee</li>
+          <li>Arkajyoti Manna</li>
+          <li>Arpan Kundu</li>
+          <li>Astha Kakkar</li>
+          <li>Eunwoo Lee</li>
+          <li>Gopal Yadav</li>
+          <li>Hemant Rathi</li>
+          <li>Jagannath Santara</li>
+          <li>Kanhu Kishore Nanda</li>
+          <li>Nava Gaddam</li>
+          <li>Nishant Gupta</li>
+          <li>Partha Paul</li>
+          <li>Parthajit Biwsas</li>
+          <li>Pavan Dharanipragada</li>
+          <li>Priyadarshini Pandit</li>
+          <li>Ritankar Chatterjee</li>
+          <li>Sachin Grover</li>
+          <li>Siddharth Prabhu</li>
+          <li>Sourav Roychowdhury</li>
+          <li>Sujoy Mahato</li>
+          <li>Supragyan Priyadarshinee</li>
+          <li>Aakash Kumar</li>
+          <li>Aditya Jain</li>
+          <li>Ajay Mohan</li>
+          <li>Akash Singh</li>
+          <li>Akashdeep Roy</li>
+          <li>Alokananda Kar</li>
+          <li>Amit Suthar</li>
+          <li>AP Sreehari</li>
+          <li>Archana Maji</li>
+          <li>Arpit Maurya</li>
+          <li>Banashree Baishya</li>
+          <li>Bhaskar Shukla</li>
+          <li>Debabrata Sahu</li>
+          <li>Debapriyo Chowdhury</li>
+          <li>Godwin Martin</li>
+          <li>Himanshu Chourasiya</li>
+          <li>Kaberi Goswami</li>
+          <li>Kaustubh</li>
+          <li>Mrityunjay Nath</li>
+          <li>Nibedita Padhi</li>
+          <li>Raju Mandal</li>
+          <li>Shivam Kumar Sharma</li>
+          <li>Soumya Adhikari</li>
+          <li>Sounak Pal</li>
+          <li>Souparna Nath</li>
+          <li>Sourav Maji</li>
+          <li>Sourish Banerjee</li>
+          <li>Srijan Kumar</li>
+          <li>Subhodip Bandyopadhyay</li>
+          <li>Tanmoy Sengupta</li> -->
+        
+        
+       </ul>
+       </div>
+
+       <div class="column">
+        <!-- <h2 Style="padding-left: 5%;font-size: 22px ; font-family: 'Times New Roman', Times, serif;"> <b>Poster Participants </b></h2> -->
+       <ul  style="padding-left: 15%;text-align: left; font-family: Georgia, 'Times New Roman', Times, serif, serif; font-size: 18px ;">
+          <!-- <li>Abhik Bhattacharjee</li>
+          <li>Abhinava Bhattacharjee</li>
+          <li>Adarsh Sudhakar</li>
+          <li>Ankur Dey</li>
+          <li>Anurag Sarkar</li>
+          <li>Ashik H</li> -->
+          <!-- <li>Asikur Rahaman</li> -->
+          <!-- <li>Balbeer Singh</li> -->
+          <!-- <li>Bhim Sen</li> -->
+          <!-- <li>Gaurav Katoch</li>
+          <li>Harshit Rajgadia</li>
+          <li>Jayashish Das</li>
+          <li>Joydeep Naskar</li>
+          <li>Kabir Bajaj</li>
+          <li>Krishna Jalan</li>
+          <li>Lakshita Bageja</li>
+          <li>Meenu</li>
+          <li>Rahul Shaw</li>
+          <li>Rishabh Kaushik</li>
+          <li>Rushikesh Suresh Suroshe</li>
+          <li>Sagnik Misra</li>
+          <li>Saikat Biswas</li>
+          <li>Shanmugapriya Prakasam</li>
+          <li>Shivam Singh Kushwah</li>
+          <li>Shruti Menon</li> -->
+          <!-- <li>Siddhi Swarupa Jena</li> -->
+          <!-- <li>Sourav Singha</li> -->
+          <!-- <li>Suprakash Paul</li> -->
+          <!-- <li>Vatsal</li>
+          <li>Vipul Kumar</li>
+          <li>Vivek Singh</li> -->
+        
+       </ul>
+       </div>
+  </div>                     
+                                            <!-- <ul  style="text-align: left; font-family: 'Times New Roman', Times, serif; font-size: 20px ;">
+                                                <li >Dileep Jatkar </li>
+                                               
+                                                <li >Roji Pius </li>
+                                               
+                                                <li >Debajyoti Sarkar</li>
+                                                
+                                                <li >Bindusar Sahoo</li>
+                                                
+                                                <li >Sayantani Bhattacharyya</li>
+                                                
+                                                <li >Arnab Kundu</li>
+                                                
+                                                <li >Amin Ahmad Nizami</li>
+                                                
+                                                <li >Ramadevi P</li>
+                                                
+                                                <li >Abhijit Gadde</li>
+                                                
+                                                <li >Abhishek Chowdhury</li>
+                                                
+                                                
+                                                <li >Swarnendu Sarkar</li>
+                                                
+                                                
+                                                <li >Chethan Krishnan</li>
+                                               
+                                            </ul>
+                                        -->
+                       
+                                <br>
+                            
+                                <!-- <h2 Style="font-size: xx-large ; font-family: 'Times New Roman', Times, serif;"> <b>Local Organising Committee </b></h2>
+                                
+                                        
+                                            <ul style="text-align: left; font-family: 'Times New Roman', Times, serif; font-size: 20px ;">
+                                                <li >Rajesh Kumar Gupta </li>
+                                               
+                                                <li >Shankhadeep Chakrabortty</li>
+                                                
+                                               
+                                            </ul> -->
+                                            <br>
+                                            <br>
+                                          
+       
+  
+<footer class="text-center py-3" style="background-color: #f8f9fa; border-top:1.2px solid #7f0741; margin: 0px 0">
+<img src="./assets/iit ropar logo.jpg" alt="IIT Ropar Logo" style="height: 40px;">
+ <p>© 2025 Department of Physics, IIT Ropar. All Rights Reserved. <br>
+       Rupnagar, Punjab 140001
+ </p>
+<p><a href="https://www.iitrpr.ac.in/physics/p/contact-2" target="_blank">Contact Us</a> | <a href="https://www.iitrpr.ac.in/physics" target="_blank">Visit Dept. Page</a></p>
+   </footer>
+
+    </div> 
+  
+    
+  
+
+
+<script>
+  $(document).ready(function(){
+  $('#carouselExampleSlidesOnly').carousel({
+    interval:3500
+  });
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<html></html>
+<head>
+  <title>Phycon_2025</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div style="width: 100%; margin: auto; padding-left: 1%; padding-right: 1%;">
+    <nav class="navbar navbar-expand-lg navbar-light toolbar" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./assets/head.jpg'); background-size: cover; background-position: center; padding-left: 0%;">
+      <!--<a class="navbar-brand" href="./index.htm">Research Scholar Day</a>-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="position: relative; top: -20px;">
+          <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 30 30%22%3E%3Cpath stroke=%22white%22 stroke-width=%223%22 d=%22M4 7h22M4 15h22M4 23h22%22/%3E%3C/svg%3E');"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" 
+      style="justify-content: right; font-size: 17px; font-family: 'Poppins', sans-serif;">
+          <ul class="nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/phycon" style="color: white;">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="" style="color: ffcc00;">Organising Committee</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./speakers.html" style="color: white;">Speakers</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./abstract.html" style="color: white;">Abstract submission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./registration.html" style="color: white;">Registration</a>
+            </li>
+            
+              <li class="nav-item">
+                  <a class="nav-link" href="./Schedule.html" style="color: white;">Schedule</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./Useful_Info.html" style="color: white;">Information</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./feedback.html" style="color: white;">Feedback</a>
+            </li>
+          </ul>
+      </div>
+  </nav>
+
+ 
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+        }
+
+        /* Container for the image and text */
+        .conference-banner {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%; /* 2:1 aspect ratio (height is half of the width) */
+            background: url('./assets/DNA.jpg') no-repeat center center; /* Set background image */
+            background-size: cover; /* Make sure image covers the frame area */
+            background-position: center;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        /* Dark overlay on top of the image */
+        .conference-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        /* Centering the text inside the banner */
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2; /* Ensure text is above the overlay */
+            width: 100%;
+        }
+
+        /* Main header text */
+        .banner-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Subheading text */
+        .banner-text h4 {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Smaller text below */
+        .banner-text h5 {
+            font-size: 24px;
+            font-style: italic;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            opacity: 0; /* Initially invisible */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out */
+        }
+
+        /* Add the transition class for opacity change */
+        .fade-in {
+            opacity: 1 !important;
+        }
+
+        /* Responsive text sizes */
+        @media (max-width: 1024px) {
+            .banner-text h1 {
+                font-size: 36px;
+            }
+
+            .banner-text h4 {
+                font-size: 24px;
+            }
+
+            .banner-text h5 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 30px;
+            }
+
+            .banner-text h4 {
+                font-size: 20px;
+            }
+
+            .banner-text h5 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-text h1 {
+                font-size: 24px;
+            }
+
+            .banner-text h4 {
+                font-size: 18px;
+            }
+
+            .banner-text h5 {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script>
+        // Array of texts with links
+        const texts = [
+        // { text: "The registration desk will open again at 10:50 AM.", link: " " },
+        // { text: "The Conference Schedule is now Available", link: " " },
+            // { text: "The registration desk will open again at 10:50 AM. ", link: " " },
+            // { text: "Registration is Open", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            // { text: "Last Date for Abstract Submission: March 8, 2025", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            // { text: "Last Date for Registration: March 13, 2025", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            
+        ];
+
+        let index = 0;
+
+        function changeText() {
+            const changingTextElement = document.getElementById('changingText');
+            const textData = texts[index];
+
+            // Fade out the current text
+            changingTextElement.classList.remove('fade-in');
+
+            // Wait for the fade-out to complete, then change the text
+            setTimeout(() => {
+                // Update text and link
+                changingTextElement.innerHTML = `<a href="${textData.link}" style="color: white; text-decoration: none;">${textData.text}</a>`;
+
+                // Fade in the new text
+                changingTextElement.classList.add('fade-in');
+
+                // Move to the next text
+                index = (index + 1) % texts.length; // Loop through the array
+            }, 1000); // Wait for 1 second (duration of fade-out)
+        }
+
+        // Change text every 4 seconds
+        setInterval(changeText, 4000);
+    </script>
+</head>
+<body>
+
+    <!-- Banner Section with Image and Text -->
+    <div class="conference-banner">
+        <div class="banner-text">
+            <h1>PHYCON-25</h1>
+            <h4>The National Physics Conference</h4>
+            <h4>21-22 March, 2025</h4>
+            <br>
+            <h5 id="changingText"> 
+                <a href="https://www.iitrpr.ac.in/phycon"
+                style="color: #ffffff; text-decoration: none;"> Department of Physics, IIT Ropar </a>  
+            </h5> <!-- Dynamic Text Here -->
+            <br>
+            <br>
+            
+            <!-- <h4> Organising Committee</h4> -->
+        </div>
+    </div>
+
+    <!-- Scripts for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+    
+<br>
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image with Caption</title>
+</head>
+<body>
+    <p style=" text-align: center; font-size: 22px;"> <b>PATRON </b></p>
+    <div style="display: flex; justify-content: center; align-items: center; height: auto; text-align: center;">
+        <div>
+            <img src="./assets/rajeev4.jpg" alt="Centered Image" style="width: 50vw; max-width: 170px; height: auto; display: block; margin: auto; border-radius: 5px;">
+            <br>
+            <h3 style="font-size: medium;"> <b>Prof. Rajeev Ahuja</b> (Director, IIT Ropar)</h3>
+        </div>
+    </div>
+</body>
+
+
+<br>
+<!-- <div class="text">
+    <h1 style="text-align: center;font-family: 'Calibri Lite' serif; font-size: 28px; font-style: normal; color: #7f0741;">
+      ORGANISED BY </h1>
+  </div>
+
+<p style="text-align:center; font-size:1.5em; color:#2E8B57; font-family: 'Arial', sans-serif; font-weight: bold; letter-spacing: 2px; margin-top: 20px; padding: 10px; background-color: #f0f8ff; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+ Department of Physics, IIT Ropar
+</p>
+
+<h4 style="text-align: center; font-family: 'Arial';"> In collaboration with</h4>
+
+<p style="text-align:center; font-size:1.5em; color:#3c2e8b; font-family: 'Arial', sans-serif; font-weight: bold; letter-spacing: 2px; margin-top: 20px; padding: 10px; background-color: #f0f8ff; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+    Aayam Physics Research Club, IIT Ropar
+   </p> -->
+
+<br>
+<hr>
+
+   <div class="text">
+    <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-style: normal; color: #7f0741;">
+        ORGANISING MEMBERS </h1>
+  </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Conference | Faculty & Aayam Members</title> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .table-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background: #0056b3;
+            color: white;
+            padding: 15px;
+            text-transform: uppercase;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        @media (max-width: 768px) {
+            .table-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            table {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <h1>Conference 2025</h1> -->
+        <!-- <p>Faculty & Aayam Members</p> -->
+        <div class="table-container">
+            <!-- Faculty Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: center;">Faculty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>Convener:</b></td><td>Dr. Kailash Chandra Jena</td></tr>
+                    <tr><td><b>Co-Convener:</b></td><td>Dr. Rajesh Kumar Gupta <br>Dr. Girish Kulkarni <br> Dr. Ritu Gupta</td></tr>
+                    <tr><td><b>Secretary:</b></td><td>Dr. Vivekanand Shukla <br>Dr. Subhendu Sarkar</td></tr>
+                    <tr><td><b>Treasury:</b></td><td>Dr. Mukesh Kumar <br> Dr. Rakesh Kumar</td></tr>
+                    <tr><td><b>Publication:</b></td><td>Dr. Vijay Singh <br> Dr. Vishwa Pal</td></tr>
+                </tbody>
+            </table>
+            <!-- Aayam Members Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: center;">Aayam Club Members</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mr. Jatin Ghildiyal</td></tr>
+                    <tr><td>Mr. Pawan Kumar</td></tr>
+                    <tr><td>Mr. Rakesh Pradhan</td></tr>
+                    <tr><td>Ms. Shilpi Srivastava</td></tr>
+                    <tr><td>Mr. Pronoy Chakraborty</td></tr>
+                    <tr><td>Mr. Siddhant Tiwari</td></tr>
+                    <tr><td>Mr. Vikash Singh</td></tr>
+                    <tr><td>Mr. Pushkar Tripathi</td></tr>
+                    <tr><td>Ms. Arpita Goyal</td></tr>
+                    <tr><td>Ms. Asmita Bera</td></tr>
+                    <tr><td>Mr. Nilesh Kumar</td></tr>
+                    <tr><td>Mr. Priyanshu Kumar</td></tr>
+                    <tr><td>Ms. Khushi Tapariya</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="margin-top: 45px; font-weight: bold; font-size: 20px;">All faculty members, staff, and students of the Department of Physics</p>
+    </div>
+</body>       
+
+      </div>
+      
+    </div>
+
+
+
+
+
+  
+    <!-- <hr style="border: 1.2px solid #7f0741; margin: 20px 0;"> -->
+
+
+    <footer class="text-center py-3" style="background-color: #f8f9fa; border-top:1.2px solid #7f0741; margin: 0px 0">
+      <img src="./assets/iit ropar logo.jpg" alt="IIT Ropar Logo" style="height: 40px;">
+      <p>© 2025 Department of Physics, IIT Ropar. All Rights Reserved. <br>
+          Rupnagar, Punjab 140001
+      </p>
+      <p><a href="https://www.iitrpr.ac.in/physics/p/contact-2" target="_blank">Contact Us</a> | <a href="https://www.iitrpr.ac.in/physics" target="_blank">Visit Dept. Page</a></p>
+  </footer>
+</div>
+    
+  </div>
+        
+    </div>
+  </div>
+
+
+
+<script>
+  $(document).ready(function(){
+  $('#carouselExampleSlidesOnly').carousel({
+    interval:3500
+  });
+});
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
