@@ -264,90 +264,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conference Registration Details</title>
-    <style>
-        body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0px 0px 0px 0px;
+<style>
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #2e7557;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        font-size: 19px;
+        line-height: 1.6;
+    }
+
+    .highlight {
+        color: rgb(241, 95, 79);
+        text-decoration: underline;
+    }
+
+    ol {
+        margin-left: 20px;
+        line-height: 1.6;
+    }
+
+    .important {
+        color: #2e7557;
+        font-weight: bold;
+    }
+
+    .card-body {
+        padding: 20px;
+        text-align: justify;
+    }
+
+    .registration-date {
+        font-size: 18px;
+        color: #c84e1f;
+        font-weight: bold;
+    }
+
+    .note {
+        font-size: 18px;
+        color: #555;
+        margin-top: 20px;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 16px;
+        color: #777;
+    }
+
+    /* ========================= */
+    /* Conference Fee Table CSS */
+    /* ========================= */
+
+    .fee-card {
+        max-width: 800px;
+        margin: 30px auto;
+        background: #ffffff;
+        border-radius: 22px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        padding: 30px 35px;
+        border-top: 7px solid #15028d;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .fee-card h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 28px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .fee-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px solid #eaeaea;
+        font-size: 18px;
+    }
+
+    .fee-row:last-child {
+        border-bottom: none;
+    }
+
+    .fee-row del {
+        color: #999;
+        margin-right: 8px;
+    }
+
+    .fee-row strong,
+    .fee-highlight {
+        color: #15028d;
+        font-weight: 600;
+    }
+
+    /* ONLY ADDED */
+    .fee-subtext {
+        font-size: 14px;
+        color: #666;
+    }
+
+    @media (max-width: 600px) {
+        .fee-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            text-align: center;
-            color: #2e7557;
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-        .content {
-            font-size: 19px;
-            line-height: 1.6;
-        }
-        .highlight {
-            color: rgb(241, 95, 79);
-            text-decoration: underline;
-        }
-        ol {
-            margin-left: 20px;
-            line-height: 1.6;
-        }
-        .important {
-            color: #2e7557;
-            font-weight: bold;
-        }
-        .card-body {
-            padding: 20px;
-            text-align: justify;
-        }
-        .registration-date {
-            font-size: 18px;
-            color: #c84e1f;
-            font-weight: bold;
-        }
-        .note {
-            font-size: 18px;
-            color: #555;
-            margin-top: 20px;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 16px;
-            color: #777;
-        }
-    </style>
+    }
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-style: normal; color: #7f0741;">
-            REGISTRATION DETAILS </h1>
-<br>
-            <p class="content" style="text-align: center;">
-                Registration is now open! Kindly <span class="highlight"><a href=" https://forms.gle/ditx1AoVW7h7BD8D8" target="_blank">click here</a></span> to register. 
-            </p>
+<div class="container">
 
-            <p style=" text-align: center;    color: #a00916;">Last date for registration has been extended to <b>March 13, 2025.</b></p>
-        
-        <div class="card-body">
-            
-            <h3 class="important">Registration Fee:</h3>
-            <ol>
-                <li>Student: <strong>₹3000/-</strong>(Includes conference kit, Gala dinner and accomodation in hostel)</li>
-                <li align="left">Postdoc/RA/Inspire Faculty: <strong>₹4000/-</strong>(Includes conference kit and Gala dinner)</li>
-                <li>Faculty: <strong>₹5000/-</strong>(Includes conference kit and Gala dinner)</li>
-            </ol>
-            
-            <div class="note">
-                <p>Accommodation to students will be provided on a shared basis in the hostels, allocated on a first-come, first-served basis. Postdoctoral researchers and research associates may also request hostel accommodation. Faculty members can request guest house accommodation.</p>
-            </div>
-        </div>
+<h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; font-size: 36px; font-style: normal; color: #7f0741;">
+    REGISTRATION DETAILS
+</h1>
+<br>
+
+<p class="content" style="text-align: center;">
+    Registration is now open! Kindly
+    <span class="highlight">
+        <a href=" https://forms.gle/ditx1AoVW7h7BD8D8" target="_blank">click here</a>
+    </span>
+    to register.
+</p>
+
+<p style="text-align: center; color: #a00916;">
+    Last date for registration: <b>To be announced soon.</b>
+</p>
+
+<div class="card-body">
+
+<div class="fee-card">
+<h2>Conference Registration Fees</h2>
+
+<div class="fee-row">
+    <span>
+        Students<br>
+        <span class="fee-subtext">
+            Includes conference kit, Gala dinner and accommodation in hostel
+        </span>
+    </span>
+    <span class="fee-highlight">
+    To be Announced soon
+</span>
+</div>
+
+<div class="fee-row">
+    <span>
+        Postdoc/RA/Inspire Faculty<br>
+        <span class="fee-subtext">
+            Includes conference kit and Gala dinner
+        </span>
+    </span>
+    <span class="fee-highlight">
+    To be Announced soon
+</span>
+</div>
+
+<div class="fee-row">
+    <span>
+        Faculty<br>
+        <span class="fee-subtext">
+            Includes conference kit and Gala dinner
+        </span>
+    </span>
+    <span class="fee-highlight">
+    To be Announced soon
+</span>
+</div>
+
+<div class="fee-row">
+    <span>
+        Foreign Students / Postdocs<br>
+        <span class="fee-subtext">
+            Show you soon something
+        </span>
+    </span>
+    <span class="fee-highlight">
+    To be Announced soon
+</span>
+</div>
+
+<div class="fee-row">
+    <span>
+        Foreign Faculty<br>
+        <span class="fee-subtext">
+            Will meet you in conference
+        </span>
+    </span>
+    <span>
+        <del>₹10000</del>
+        <strong>₹11000*</strong> + 18% GST
+    </span>
+</div>
+
+
 
         <div class="footer">
             <p>For any inquiries, feel free to contact us at <a href="phycon@iitrpr.ac.in">phycon@iitrpr.ac.in</a></p>
