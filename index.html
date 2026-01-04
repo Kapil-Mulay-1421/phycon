@@ -109,7 +109,15 @@
             font-weight: bold;
             color: white;
             text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+            animation-name: fadeIn;
+            animation-duration: 2s;
+            animation-fill-mode: forwards; /* Keeps the final state (opacity: 1) */
+            opacity: 0; /* Start hidden */
         }
+        @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-50px); } /* Starts off-screen and invisible */
+        100% { opacity: 1; transform: translateY(0); } /* Ends in original position and visible */
+    }
 
         /* Subheading text */
         .banner-text h4 {
@@ -117,6 +125,10 @@
             font-weight: bold;
             color: white;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            animation-name: fadeIn;
+            animation-duration: 2s;
+            animation-fill-mode: forwards; /* Keeps the final state (opacity: 1) */
+            opacity: 0; /* Start hidden */
         }
 
         /* Smaller text below */
@@ -226,7 +238,7 @@
 
         <div class="banner-text">
             <br>
-            <h1>PHYCON-26</h1>
+            <h1 class="fade-in-header">PHYCON-26</h1>
             <h4>The National Physics Conference</h4>
             <h4>Dates to be updated soon</h4>
             <br>
@@ -495,7 +507,7 @@
             <!-- Phone Section with Icons -->
             <h5 class="mt-4 mb-3 text-success"><i class="bi bi-telephone-fill"></i> <b>Phone:</b></h5>
             <ul class="list-unstyled">
-                <li class="mb-2">
+                <!-- <li class="mb-2">
                     <i class="bi bi-person-circle me-2 fs-5 text-dark"></i>
                     <b>Dr. Girish Kulkarni:</b>  
                     <a href="tel:+917054133361" class="text-dark ms-2">+91-7054133361</a>
@@ -509,7 +521,7 @@
                     <i class="bi bi-person-circle me-2 fs-5 text-dark"></i>
                     <b>Mr. Jatin Ghildiyal:</b>  
                     <a href="tel:+917500622411" class="text-dark ms-2">+91-7500622411</a>
-                </li>
+                </li> -->
             </ul>
 
             <!-- Keep Your Existing Table Here -->
