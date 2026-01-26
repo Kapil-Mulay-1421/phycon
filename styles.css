@@ -73,6 +73,8 @@
 
 .sponsors-section {
   padding: 2rem 1rem;
+  max-width: 1100px;
+  margin-left: 12%
 }
 
 .sponsors-section h2 {
