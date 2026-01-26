@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <div style="width: 100%; margin: auto; padding-left: 1%; padding-right: 1%;">
-    <nav class="navbar navbar-expand-lg navbar-light toolbar" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('phycon/assets/head.jpg'); background-size: cover; background-position: center; padding-left: 0%;">
+  <div style="width: 100%; margin: auto;">
+    <nav class="navbar navbar-expand-lg navbar-light toolbar" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./assets/head.jpg'); background-size: cover; background-position: center; padding-left: 0%;">
       <!--<a class="navbar-brand" href="./index.htm">Research Scholar Day</a>-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="position: relative; top: -0px;">
@@ -25,26 +25,26 @@
                   <a class="nav-link" href="" style="color: ffcc00;">Home<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="phycon/organisingnew.html" style="color: white;">Organising Committee</a>
+                <a class="nav-link" href="./organisingnew.html" style="color: white;">Organising Committee</a>
             </li>
               <li class="nav-item">
-                  <a class="nav-link" href="phycon/speakers.html" style="color: white;">Speakers</a>
+                  <a class="nav-link" href="./speakers.html" style="color: white;">Speakers</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="phycon/abstract.html" style="color: white;">Abstract submission</a>
+                  <a class="nav-link" href="./abstract.html" style="color: white;">Abstract submission</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="phycon/registration.html" style="color: white;">Registration</a>
+                <a class="nav-link" href="./registration.html" style="color: white;">Registration</a>
             </li>
             
               <li class="nav-item">
-                  <a class="nav-link" href="phycon/Schedule.html" style="color: white;">Schedule</a>
+                  <a class="nav-link" href="./Schedule.html" style="color: white;">Schedule</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="phycon/Useful_Info.html" style="color: white;">Information</a>
+                  <a class="nav-link" href="./Useful_Info.html" style="color: white;">Information</a>
               </li>
               <!-- <li class="nav-item">
-                <a class="nav-link" href="phycon/feedback.html" style="color: white;">Feedback</a>
+                <a class="nav-link" href="./feedback.html" style="color: white;">Feedback</a>
             </li> -->
           </ul>
       </div>
@@ -67,30 +67,66 @@
             height: 100%;
         }
 
-        /* Container for the image and text */
-        .conference-banner {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 50%; /* 2:1 aspect ratio (height is half of the width) */
-            background: url('phycon/assets/New3.jpeg') no-repeat center center; /* Set background image */
-            background-size: cover; /* Make sure image covers the frame area */
-            background-position: center;
-            border-radius: 10px;
-            z-index: 1;
-        }
+.conference-banner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%; /* 2:1 aspect ratio */
+    overflow: hidden;
+    border-radius: 10px;
+}
 
-        /* Dark overlay on top of the image */
-        .conference-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-            z-index: 1;
-        }
+/* ===== SLIDES ===== */
+.banner-track {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    width: 600%;
+    animation: stepSlide 15s infinite;
+    z-index: 0;
+}
+
+.slide {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide1 { background-image: url('./assets/Carousel1.jpeg'); }
+.slide2 { background-image: url('./assets/Carousel2.jpeg'); }
+.slide3 { background-image: url('./assets/Carousel3.jpeg'); }
+.slide4 { background-image: url('./assets/Carousel4.jpeg'); }
+.slide5 { background-image: url('./assets/Carousel5.jpeg'); }
+.slide6 { background-image: url('./assets/Carousel6.jpeg'); }
+
+/* ===== DARK OVERLAY ===== */
+.conference-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* ===== TEXT & LINKS ALWAYS ON TOP ===== */
+.banner-text,
+.countdown-timer {
+    position: relative;
+    z-index: 3;
+}
+
+/* ===== STEP SLIDE ANIMATION ===== */
+@keyframes stepSlide {
+    0%, 13%   { transform: translateX(0); }
+    17%, 30%  { transform: translateX(-16.666%); }
+    34%, 47%  { transform: translateX(-33.333%); }
+    51%, 64%  { transform: translateX(-50%); }
+    68%, 81%  { transform: translateX(-66.666%); }
+    85%, 98%  { transform: translateX(-83.333%); }
+    100%      { transform: translateX(0); }
+}
+
+
+
 
         /* Centering the text inside the banner */
         .banner-text {
@@ -195,8 +231,8 @@
         // { text: "The registration desk will open again at 10:50 AM.", link: " " },
         // { text: "The Conference Schedule is now Available", link: " " },
             // { text: "The registration desk will open again at 10:50 AM. ", link: " " },
-            // { text: "Last Date for Abstract Submission: March 8, 2025", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
-            // { text: "Last Date for Registration: March 13, 2025", link: "https://www.iitrpr.ac.in/phycon/registration.html" },
+            // { text: "Last Date for Abstract Submission: March 8, 2025", link: "https://www.iitrpr.ac.in/./registration.html" },
+            // { text: "Last Date for Registration: March 13, 2025", link: "https://www.iitrpr.ac.in/./registration.html" },
             
         ];
 
@@ -233,21 +269,48 @@
 <body>
 
     <!-- Banner Section with Image and Text -->
-    <div class="conference-banner">
-        <a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="Asia/Kolkata" data-date="2026-03-09 21:01">PHYCON Begins In:</a>
+<div class="conference-banner">
 
-        <div class="banner-text">
-            <br>
-            <h1 class="fade-in-header">PHYCON-26</h1>
-            <h4>The National Physics Conference</h4>
-            <h4>Dates to be updated soon</h4>
-            <br>
-            <h5 id="changingText"> 
-                <a href="https://www.iitrpr.ac.in/phycon"
-                style="color: #ffffff; text-decoration: none;"> Department of Physics, IIT Ropar </a>  
-            </h5> <!-- Dynamic Text Here -->
-        </div>
+    <!-- SLIDES (background layer) -->
+    <div class="banner-track">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+        <div class="slide slide4"></div>
+        <div class="slide slide5"></div>
+        <div class="slide slide6"></div>
     </div>
+
+    <!-- EXISTING CONTENT (always on top) -->
+    <div style="display: flex; justify-content: center; width: 100%;">
+        <a style="z-index: 3; pointer-events: none;" href="https://logwork.com/countdown-timer"
+           class="countdown-timer"
+           data-width="489"
+           data-timezone="Asia/Kolkata"
+           data-date="2026-01-28 23:18"
+           data-background="#52006b"
+           data-textcolor="#ffffff"
+           data-unitscolor="#ffffff"
+           data-digitscolor="#ffffff">
+           &nbsp;
+        </a>
+    </div>
+
+    <div class="banner-text">
+        <br>
+        <h1 class="fade-in-header">PHYCON-26</h1>
+        <h4>The National Physics Conference</h4>
+        <h4>Dates to be updated soon</h4>
+        <br>
+        <h5 id="changingText">
+            <a href="https://www.iitrpr.ac.in/phycon"
+               style="color: #ffffff; text-decoration: none;">
+               Department of Physics, IIT Ropar
+            </a>
+        </h5>
+    </div>
+</div>
+
 
     <!-- Scripts for Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -370,9 +433,9 @@ PHYCON-26 seeks to contribute to future scientific progress in the country.</p>
 
         </div>
         <div class="poster">
-            <img src="phycon/assets/new_poster.jpg" alt="Event Poster">
+            <img src="./assets/new_poster.jpg" alt="Event Poster">
             <div class="download">
-                <a href="phycon/assets/new_poster.jpg" download>Download Poster</a>
+                <a href="./assets/new_poster.jpg" download>Download Poster</a>
             </div>
         </div>
     </div>
@@ -572,12 +635,6 @@ PHYCON-26 seeks to contribute to future scientific progress in the country.</p>
                     </div>
 
                     <div class="emergency-card">
-                    <h3>Estate & Maintenance</h3>
-                    <p><a href="tel:01881235100">01881-23-5100</a> / 
-                        <a href="tel:9041043362">90410-43362</a></p>
-                    </div>
-
-                    <div class="emergency-card">
                     <h3>Tele-MANAS Helpline</h3>
                     <p>24×7 Free Counselling</p>
                     <p><a href="tel:18008914416">1800-89-14416</a></p>
@@ -597,6 +654,97 @@ PHYCON-26 seeks to contribute to future scientific progress in the country.</p>
                 </div>
                 </section>
 
+                <section class="sponsors-section">
+  <h2>Our Sponsors</h2>
+
+  <div class="sponsors-scroll">
+
+    <div class="sponsor-card gold">
+      <div class="logo">
+        <img src="./assets/sponsor1.jpg" alt="Gold Sponsor Logo">
+      </div>
+      <div class="label">Gold Sponsor</div>
+    </div>
+
+    <div class="sponsor-card silver">
+      <div class="logo">
+        <img src="./assets/sponsor2.jpg" alt="Silver Sponsor Logo">
+      </div>
+      <div class="label">Silver Sponsor</div>
+    </div>
+
+    <div class="sponsor-card technical">
+      <div class="logo">
+        <img src="./assets/sponsor3.jpg" alt="Technical Sponsor Logo">
+      </div>
+      <div class="label">Technical Sponsor</div>
+    </div>
+
+    <div class="sponsor-card associate">
+      <div class="logo">
+        <img src="./assets/sponsor4.jpg" alt="Associate Sponsor Logo">
+      </div>
+      <div class="label">Associate Sponsor</div>
+    </div>
+    <div class="sponsor-card gold">
+      <div class="logo">
+        <img src="./assets/sponsor1.jpg" alt="Gold Sponsor Logo">
+      </div>
+      <div class="label">Gold Sponsor</div>
+    </div>
+
+    <div class="sponsor-card silver">
+      <div class="logo">
+        <img src="./assets/sponsor2.jpg" alt="Silver Sponsor Logo">
+      </div>
+      <div class="label">Silver Sponsor</div>
+    </div>
+
+    <div class="sponsor-card technical">
+      <div class="logo">
+        <img src="./assets/sponsor3.jpg" alt="Technical Sponsor Logo">
+      </div>
+      <div class="label">Technical Sponsor</div>
+    </div>
+
+    <div class="sponsor-card associate">
+      <div class="logo">
+        <img src="./assets/sponsor4.jpg" alt="Associate Sponsor Logo">
+      </div>
+      <div class="label">Associate Sponsor</div>
+    </div>
+    <div class="sponsor-card gold">
+      <div class="logo">
+        <img src="./assets/sponsor1.jpg" alt="Gold Sponsor Logo">
+      </div>
+      <div class="label">Gold Sponsor</div>
+    </div>
+
+    <div class="sponsor-card silver">
+      <div class="logo">
+        <img src="./assets/sponsor2.jpg" alt="Silver Sponsor Logo">
+      </div>
+      <div class="label">Silver Sponsor</div>
+    </div>
+
+    <div class="sponsor-card technical">
+      <div class="logo">
+        <img src="./assets/sponsor3.jpg" alt="Technical Sponsor Logo">
+      </div>
+      <div class="label">Technical Sponsor</div>
+    </div>
+
+    <div class="sponsor-card associate">
+      <div class="logo">
+        <img src="./assets/sponsor4.jpg" alt="Associate Sponsor Logo">
+      </div>
+      <div class="label">Associate Sponsor</div>
+    </div>
+
+  </div>
+</section>
+
+
  
 
   
@@ -604,7 +752,7 @@ PHYCON-26 seeks to contribute to future scientific progress in the country.</p>
 
 
     <footer class="text-center py-3" style="background-color: #f8f9fa; border-top:1.2px solid #7f0741; margin: 0px 0">
-      <img src="phycon/assets/iit ropar logo.jpg" alt="IIT Ropar Logo" style="height: 40px;">
+      <img src="./assets/iit ropar logo.jpg" alt="IIT Ropar Logo" style="height: 40px;">
       <p>© 2026 Department of Physics, IIT Ropar. All Rights Reserved. <br>
           Rupnagar, Punjab 140001
       </p>
