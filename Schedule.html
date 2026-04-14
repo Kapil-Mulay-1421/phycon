@@ -328,9 +328,14 @@
             <li class="nav-item">
                 <button class="nav-link" id="day2-tab" data-bs-toggle="tab" data-bs-target="#day2" type="button" role="tab">Day 2</button>
             </li>
+            <li class="nav-item">
+    <button class="nav-link" id="day3-tab" data-bs-toggle="tab" data-bs-target="#day3" type="button" role="tab">
+        Day 3
+    </button>
+</li>
         </ul>
 
-        <<div class="tab-content" id="scheduleTabContent" style="display:none;">
+        <div class="tab-content" id="scheduleTabContent" style="display:none;">
 
             <!-- Day 1 Schedule -->
             <div class="tab-pane fade show active" id="day1" role="tabpanel">
@@ -712,11 +717,44 @@ spinor condensates
                         <!-- <p>Multiple Tracks Available</p> -->
                     </div>
                 </div>
+                </div>   <!-- closes Day 2 -->
+             <!-- Day 3 Schedule -->
+<div class="tab-pane fade" id="day3" role="tabpanel">
+    <br>
 
+    <p style="font-size: 20px;"><b>Session-1</b></p>
 
+    <div class="session" onclick="toggleDetails('d3s1')">
+        <h4>09:00 AM - 10:00 AM | Opening / Talk</h4>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="d3s1" class="session-details">
+        <p><b>Speaker:</b> TBD <br><b>Title:</b> TBD</p>
+    </div>
+
+    <div class="session" onclick="toggleDetails('d3s2')">
+        <h4>10:00 AM - 10:30 AM | Tea Break</h4>
+        <div id="d3s2" class="session-details"></div>
+    </div>
+
+    <p style="font-size: 20px;"><b>Session-2</b></p>
+
+    <div class="session" onclick="toggleDetails('d3s3')">
+        <h4>10:30 AM - 12:30 PM | Student Presentations</h4>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="d3s3" class="session-details">
+        <p>Details here...</p>
+    </div>
+
+    <div class="session" onclick="toggleDetails('d3s4')">
+        <h4>12:30 PM - 01:30 PM | Lunch</h4>
+        <div id="d3s4" class="session-details"></div>
+    </div>
+
+</div>
 
             </div>
-        </div>
 
         <br>
         <br>
