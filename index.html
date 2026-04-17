@@ -86,7 +86,7 @@
     width: 100%;
     padding-bottom: 50%; /* 2:1 aspect ratio */
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 0 !important;
 }
 
 /* ===== SLIDES ===== */
@@ -305,7 +305,7 @@
     <div style="display: flex; justify-content: center; width: 100%;">
         <a style="z-index: 3; pointer-events: none;" href="https://logwork.com/countdown-timer"
            class="countdown-timer"
-           data-width="300"
+           data-width="900"
            data-timezone="Asia/Kolkata"
            data-date="2026-05-28 00:00"
            data-background="#52006b"
@@ -394,6 +394,11 @@
             flex: 1;
             max-width: 500px;
         }
+
+        .description p {
+    text-align: justify;
+    line-height: 1.7;   /* optional but recommended */
+}
         
     .description .title {
         color: #007bff;
@@ -482,9 +487,9 @@
 
 </div>
         <div class="poster">
-            <img src="./assets/final_poster.png" alt="Event Poster">
+            <img src="./assets/phycon26_flyer.png" alt="Event Poster">
             <div class="download">
-                <a href="./assets/final_poster.png" download>Download Poster</a>
+                <a href="./assets/phycon26_flyer.png" download>Download Poster</a>
             </div>
         </div>
     </div>
