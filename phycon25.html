@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
+
+    <style>
+.gallery-img {
+    width: 65%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+</style>
+
 </head>
 
 <body>
@@ -44,7 +59,7 @@
                   <a class="nav-link" href="./Useful_Info.html" style="color: white;">Information</a>
               </li>
               <li class="nav-item active">
-                  <a class="nav-link" href="" style="color: ffcc00;">Phycon 25<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="" style="color: ffcc00;">PHYCON-25<span class="sr-only">(current)</span></a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" href="./feedback.html" style="color: white;">Feedback</a>
@@ -53,12 +68,364 @@
       </div>
   </nav>
     
-    <div style="padding: 20px;">
-      <h1>Phycon 25</h1>
-      <p>Welcome to Phycon 25. This page will contain information about the 2025 physics conference.</p>
+    <!-- Banner Section -->
+<style>
+.conference-banner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: url('./assets/PHYCON25_1.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.conference-banner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+</style>
+
+<div class="conference-banner">
+  <div class="banner-text">
+      <h1>PHYCON-25</h1>
+      <h4>The National Physics Conference</h4>
+      <h4>21-22 March, 2025</h4>
+      <h5>Department of Physics, IIT Ropar</h5>
+  </div>
+</div>
+
+<br>
+
+<div class="text">
+  <h1 style="text-align: center; color: #bd0960;">PHYCON-25</h1>
+  <h4 style="text-align: center; color: #7f0741;">The National Physics Conference</h4>
+  <h3 style="text-align: center; color: #3895ff;">21-22 March, 2025</h3>
+  <h5 style="text-align: center; color: #7f0741;">Department of Physics, IIT Ropar</h5>
+</div>
+
+<hr>
+
+<div class="container" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+  
+  <div style="max-width:500px;">
+    <h2 style="color:#007bff;">Highlights of the Conference</h2>
+    <p align="justify">
+  <font color="#8B0000"><b>PHYCON-25</b></font>, held at IIT Ropar on <b>21–22 March 2025</b>, marked a significant milestone in the institute’s scientific journey, bringing together over <b>250+ researchers, academicians, and students</b> from across India.
+  <br><br>
+
+  The conference was graced by eminent speakers — <b>Prof. S. B. Ogale, Prof. Anand Kumar Jha, Prof. M. Krishnamurthy, Prof. Peter Kruse, and Prof. Raghunath Sahoo</b> — who delivered inspiring plenary talks across diverse frontiers of physics.
+  <br><br>
+
+  The event was inaugurated under the leadership of <b>Prof. Rajeev Ahuja</b>, Director of IIT Ropar, whose vision for interdisciplinary research and innovation set the tone for the conference.
+  <br><br>
+
+  With vibrant student presentations, active industry participation, and rich scientific dialogue, <font color="#8B0000"><b>PHYCON-25</b></font> stood out as a major achievement in fostering collaboration, advancing cutting-edge research, and strengthening the bridge between academia and real-world applications.
+</p>
+  </div>
+
+  <div style="max-width:400px; text-align:center;">
+    <img src="./assets/Poster2.png" style="width:100%;">
+    <br><br>
+    <a href="./assets/Poster2.png" download class="btn btn-primary">Download Poster</a>
+  </div>
+
+</div>
+
+<br>
+
+<hr>
+
+<section style="padding: 40px 20px; background-color:#f9f9f9;">
+  
+  <h2 style="
+      text-align:center; 
+      color:#007bff; 
+      font-family: 'Calibri Light', sans-serif;
+      font-size: 36px;
+      margin-bottom: 10px;
+  ">
+    Highlights & Memories
+  </h2>
+
+  <p style="
+      text-align:center; 
+      font-size:18px; 
+      color:#555;
+      margin-bottom: 30px;
+  ">
+    A glimpse of some memorable moments from PHYCON-25
+  </p>
+
+  <!-- Vertical Clean Gallery -->
+<div style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+">
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_1.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    A snapshot of minds in pursuit of knowledge, at PHYCON-25!
+
+</p>
     </div>
 
-  </div>
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_2.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    A room full of moments, big smiles!
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25-new3n.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Opening insights from the Director: Prof. Rajeev Ahuja
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_4.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Team at Registration desk.
+
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_5.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Dr. Girish Kulkarni outlining the history and the purpose of the PHYCON-25
+
+
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_6.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Distinguished speakers, Director and HOD marking the formal commencement of the proceedings!
+                                                      
+
+
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_7.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Felicitation of the invited speakers by Prof. Rajeev Ahuja
+
+
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_7 (2).png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Felicitation of the invited speakers by Prof. Rajeev Ahuja
+
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_8.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    HOD, Dr. Kailash Chandra Jena felicitating Prof. Rajeev Ahuja
+
+
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_9.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Felicitation of student Speaker!
+
+
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_10.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Enjoying conversations and the questions to the lunch table as well!
+
+
+</p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_11.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Participants presenting posters!
+
+    </p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_11 (2).png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Participants presenting posters!
+
+    </p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_news1.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Conference coverage in print
+
+
+     </p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_news2.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Making Headlines
+
+
+     </p>
+    </div>
+
+    <div style="text-align:center;">
+        <img src="./assets/PHYCON25_news3.png" class="gallery-img">
+        <p style="
+    margin-top:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#0e7c38;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.5px;
+">
+    Recognized by the Press
+
+
+</p>
+    </div>
+
+</div>
+
+</section>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -70,6 +437,33 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+
+<footer class="text-center py-3" style="
+background-color:#f8f9fa;
+border-top:1.2px solid #7f0741;
+margin-top:40px;
+">
+
+<img src="./assets/iit ropar logo.jpg" style="height:40px;"><br><br>
+
+<p>
+© 2026 Department of Physics, IIT Ropar. All Rights Reserved.<br>
+Rupnagar, Punjab 140001
+</p>
+
+<p>
+<a href="https://www.iitrpr.ac.in/physics/p/contact-2">Contact Us</a> |
+<a href="https://www.iitrpr.ac.in/physics">Visit Dept. Page</a>
+</p>
+
+</footer>
+
+
+</body>
 </html>
