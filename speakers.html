@@ -284,6 +284,11 @@
           margin: auto;
       }
 
+      /* Full-width top director card */
+      .speaker-card.full-width {
+          grid-column: 1 / -1;
+      }
+
       /* Speaker card styling */
       .speaker-card {
           display: flex;
@@ -325,7 +330,7 @@
 <body>
 
   <div class="speakers-container">
-      <div class="speaker-card">
+      <div class="speaker-card full-width">
           <img src="./assets/rajeev4.jpg" alt="Prof. Rajeev Ahuja">
           <div class="speaker-info">
               <h3><a style="text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?hl=en&user=OqyvV_oAAAAJ">Prof. Rajeev Ahuja</a></h3>
@@ -333,21 +338,19 @@
           </div>
       </div>
 
+      <div class="speaker-card">
+          <img src="./assets/prof_Umesh_V_Waghmare.jpg" alt="Prof. Umesh V Waghmare">
+          <div class="speaker-info">
+              <h3><a style="text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=EY7WIIwAAAAJ&hl=en">Prof. Umesh V Waghmare</a></h3>
+              <p>President, Theoretical Sciences Unit, JNCASR</p>
+          </div>
+      </div>
 
       <div class="speaker-card">
           <img src="./assets/Prof_Venu_Gopal_Achanta_NPL.jpg" alt="Prof. Venu Gopal Achanta">
           <div class="speaker-info">
               <h3><a style="text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=ZgLTn-EAAAAJ&hl=en">Prof. Venu Gopal Achanta</a></h3>
               <p>Director, CSIR-NPL</p>
-          </div>
-      </div>
-
-
-      <div class="speaker-card">
-          <img src="./assets/prof_Umesh_V_Waghmare.jpg" alt="Prof. Umesh V Waghmare">
-          <div class="speaker-info">
-              <h3><a style="text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=EY7WIIwAAAAJ&hl=en">Prof. Umesh V Waghmare</a></h3>
-              <p>President,Theoritical Sciences Unit, JNCASR</p>
           </div>
       </div>
 
