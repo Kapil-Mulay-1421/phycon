@@ -273,13 +273,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Speakers</title>
   <style>
-      /* Container for speakers */
-      .speakers-container {
+      /* Top director card wrapper */
+      .speaker-top {
+          display: flex;
+          justify-content: center;
+          padding: 30px;
+      }
+
+      /* Grid for remaining speakers */
+      .speakers-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
           gap: 20px;
           justify-content: center;
-          padding: 30px;
+          padding: 0 30px 30px;
           max-width: 900px;
           margin: auto;
       }
@@ -292,6 +299,12 @@
           padding: 20px;
           border-radius: 10px;
           box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          margin: 0 auto;
+      }
+
+      .speaker-top .speaker-card {
+          max-width: 450px;
       }
 
       /* Image styling */
@@ -316,7 +329,7 @@
 
       /* Responsive Adjustments */
       @media (max-width: 768px) {
-          .speakers-container {
+          .speakers-grid {
               grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
           }
       }
@@ -324,7 +337,7 @@
 </head>
 <body>
 
-  <div class="speakers-container">
+  <div class="speaker-top">
       <div class="speaker-card">
           <img src="./assets/rajeev4.jpg" alt="Prof. Rajeev Ahuja">
           <div class="speaker-info">
@@ -332,22 +345,22 @@
               <p>Director, IIT Ropar</p>
           </div>
       </div>
+  </div>
 
+  <div class="speakers-grid">
+      <div class="speaker-card">
+          <img src="./assets/prof_Umesh_V_Waghmare.jpg" alt="Prof. Umesh V Waghmare">
+          <div class="speaker-info">
+              <h3><a style="text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=EY7WIIwAAAAJ&hl=en">Prof. Umesh V Waghmare</a></h3>
+              <p>President, Theoretical Sciences Unit, JNCASR</p>
+          </div>
+      </div>
 
       <div class="speaker-card">
           <img src="./assets/Prof_Venu_Gopal_Achanta_NPL.jpg" alt="Prof. Venu Gopal Achanta">
           <div class="speaker-info">
               <h3><a style="text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=ZgLTn-EAAAAJ&hl=en">Prof. Venu Gopal Achanta</a></h3>
               <p>Director, CSIR-NPL</p>
-          </div>
-      </div>
-
-
-      <div class="speaker-card">
-          <img src="./assets/prof_Umesh_V_Waghmare.jpg" alt="Prof. Umesh V Waghmare">
-          <div class="speaker-info">
-              <h3><a style="text-decoration: none;" target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=EY7WIIwAAAAJ&hl=en">Prof. Umesh V Waghmare</a></h3>
-              <p>President,Theoritical Sciences Unit, JNCASR</p>
           </div>
       </div>
 
