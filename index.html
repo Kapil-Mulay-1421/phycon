@@ -717,82 +717,166 @@
 <section class="sponsors-section">
   <h2>Our Sponsors</h2>
 
+  <style>
+    .sponsors-section .sponsors-scroll {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .sponsor-card {
+      flex: 0 0 190px;
+      max-width: 190px;
+            min-height: 280px;
+            background: linear-gradient(180deg,#ffffff,#fbfbfb);
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+    }
+
+        .sponsor-card .logo {
+            width: 100%;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            background: transparent;
+        }
+
+    .sponsor-card .logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+        .sponsor-name {
+            padding: 0 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #222;
+            line-height: 1.2;
+            margin-top: 12px;
+        }
+
+        .sponsor-card-bottom {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 10px;
+            margin-top: auto;
+            height: 48%; /* occupy roughly lower half */
+        }
+
+    .sponsor-card .label {
+      margin: 0;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+    }
+
+        .sponsor-card.gold .sponsor-card-bottom {
+            background: #f7df95;
+        }
+
+        .sponsor-card.platinum .sponsor-card-bottom {
+            background: #d8d8e8;
+        }
+
+        .sponsor-card.bronze .sponsor-card-bottom {
+            background: #b56d30;
+        }
+
+        /* make the colored footer appear below content and cover the lower half visually */
+        .sponsor-card::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 48%;
+            z-index: 0;
+            border-bottom-left-radius: 14px;
+            border-bottom-right-radius: 14px;
+            background: transparent;
+            transition: background 0.2s;
+        }
+
+        .sponsor-card.platinum::after { background: #d8d8e8; }
+        .sponsor-card.gold::after { background: #f7df95; }
+        .sponsor-card.bronze::after { background: #b56d30; }
+
+                /* ensure interior content sits above the colored pseudo-element */
+                .sponsor-card > * { position: relative; z-index: 1; }
+
+                .sponsor-card-bottom .sponsor-name {
+                    font-size: 1rem;
+                    font-weight: 800;
+                    text-align: center;
+                    margin-bottom: 6px;
+                }
+
+                .sponsor-card-bottom .label {
+                    font-size: 0.85rem;
+                    opacity: 0.95;
+                }
+
+        .sponsor-card.gold .label,
+        .sponsor-card.platinum .label {
+            color: #1f1f1f;
+        }
+
+        .sponsor-card.bronze .label {
+            color: #ffffff;
+        }
+  </style>
+
   <div class="sponsors-scroll">
 
-    <div class="sponsor-card gold">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Gold Sponsor Logo">
-      </div>
-      <div class="label">Gold Sponsor</div>
-    </div>
+        <div class="sponsor-card platinum">
+            <div class="logo">
+                <img src="C:\Users\Kapil\College\dept\Phyday website\phycon\assets\ATOS_Logo.png" alt="ATOS India Logo">
+            </div>
+            <div class="sponsor-card-bottom">
+                <div>
+                    <div class="sponsor-name" style="color:#1f1f1f;">ATOS India</div>
+                    <div class="label">Platinum Sponsor</div>
+                </div>
+            </div>
+        </div>
 
-    <div class="sponsor-card silver">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Silver Sponsor Logo">
-      </div>
-      <div class="label">Silver Sponsor</div>
-    </div>
+        <div class="sponsor-card gold">
+            <div class="logo">
+                <img src="C:\Users\Kapil\College\dept\Phyday website\phycon\assets\Edmund_Optics_Logo.png" alt="Edmund Optics Logo">
+            </div>
+            <div class="sponsor-card-bottom">
+                <div>
+                    <div class="sponsor-name" style="color:#1f1f1f;">Edmund Optics</div>
+                    <div class="label">Gold Sponsor</div>
+                </div>
+            </div>
+        </div>
 
-    <div class="sponsor-card technical">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Technical Sponsor Logo">
-      </div>
-      <div class="label">Technical Sponsor</div>
-    </div>
-
-    <div class="sponsor-card associate">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Associate Sponsor Logo">
-      </div>
-      <div class="label">Associate Sponsor</div>
-    </div>
-    <div class="sponsor-card gold">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Gold Sponsor Logo">
-      </div>
-      <div class="label">Gold Sponsor</div>
-    </div>
-
-    <div class="sponsor-card silver">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Silver Sponsor Logo">
-      </div>
-      <div class="label">Silver Sponsor</div>
-    </div>
-
-    <div class="sponsor-card technical">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Technical Sponsor Logo">
-      </div>
-      <div class="label">Technical Sponsor</div>
-    </div>
-
-    <div class="sponsor-card associate">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Associate Sponsor Logo">
-      </div>
-      <div class="label">Associate Sponsor</div>
-    </div>
-    <div class="sponsor-card gold">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Gold Sponsor Logo">
-      </div>
-      <div class="label">Gold Sponsor</div>
-    </div>
-
-    <div class="sponsor-card silver">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Silver Sponsor Logo">
-      </div>
-      <div class="label">Silver Sponsor</div>
-    </div>
-
-    <div class="sponsor-card technical">
-      <div class="logo">
-        <img src="./assets/TBDSponsor.png" alt="Technical Sponsor Logo">
-      </div>
-      <div class="label">Technical Sponsor</div>
-    </div>
+        <div class="sponsor-card bronze">
+            <div class="logo">
+                <img src="C:\Users\Kapil\College\dept\Phyday website\phycon\assets\Advanced Photonics_Logo.png" alt="Advanced Photonics Logo">
+            </div>
+            <div class="sponsor-card-bottom">
+                <div>
+                    <div class="sponsor-name" style="color:#ffffff;">Advanced Photonics</div>
+                    <div class="label">Bronze Sponsor</div>
+                </div>
+            </div>
+        </div>
 
   </div>
 </section>

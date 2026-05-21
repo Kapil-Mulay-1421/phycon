@@ -139,7 +139,7 @@
 }
 
 /* Sponsor tiers */
-.sponsor-card.gold .label {
+/* .sponsor-card.gold .label {
   background: linear-gradient(135deg, #ffd700, #ffb300);
   color: #333;
 }
@@ -149,15 +149,17 @@
   color: #263238;
 }
 
-.sponsor-card.technical .label {
-  background: linear-gradient(135deg, #1976d2, #0d47a1);
-  color: #fff;
+/* Platinum and Bronze gradients (left→right) */
+/* .sponsor-card.platinum .label {
+  background: linear-gradient(90deg, #f7f7fb 0%, #d8d8e8 55%, #bfbfd6 100%);
+  color: #1f1f1f;
 }
 
-.sponsor-card.associate .label {
-  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+.sponsor-card.bronze .label {
+  background: linear-gradient(90deg, #d29a71 0%, #b56d30 55%, #8f4b1d 100%);
   color: #fff;
-}
+}  */
+
 
 
         .banner-text h1 {
