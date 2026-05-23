@@ -138,6 +138,27 @@
   letter-spacing: 0.5px;
 }
 
+.sponsor-card.silver .sponsor-card-bottom {
+  background: #cfd8dc;
+}
+
+.sponsor-card.diamond .sponsor-card-bottom {
+  background: linear-gradient(135deg, #e6ecff 0%, #d3d8ff 100%);
+}
+
+.sponsor-card.silver::after {
+  background: #cfd8dc;
+}
+
+.sponsor-card.diamond::after {
+  background: linear-gradient(135deg, #e6ecff 0%, #d3d8ff 100%);
+}
+
+.sponsor-card.silver .label,
+.sponsor-card.diamond .label {
+  color: #1f1f1f;
+}
+
 /* Sponsor tiers */
 /* .sponsor-card.gold .label {
   background: linear-gradient(135deg, #ffd700, #ffb300);
